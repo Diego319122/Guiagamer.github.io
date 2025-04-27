@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optimiza tu PC - GameGuidesPro</title>
+  <style>
+    /* Estilo moderno para GameGuidesPro */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      text-align: center;
+      color: #00ffff;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      text-align: center;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffff;
+    }
+
+    .hero {
+      background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+      padding: 80px 20px;
+      text-align: center;
+      color: #fff;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: #00ffff;
+      color: #111;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #00b8b8;
+    }
+
+    .optimize-tips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .tip-card {
+      background-color: #1f1f1f;
+      flex: 1 1 calc(33.333% - 30px);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .tip-card:hover {
+      transform: translateY(-5px);
+      background-color: #333;
+    }
+
+    .tip-card h3 {
+      color: #00ffff;
+      margin-bottom: 15px;
+    }
+
+    .tip-card p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .tip-card a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .price-calculator {
+      background-color: #222;
+      padding: 40px;
+      border-radius: 10px;
+      margin-top: 40px;
+      color: #fff;
+    }
+
+    .price-calculator h3 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #00ffff;
+    }
+
+    .select-component {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+
+    .select-component label {
+      font-size: 1rem;
+      color: #00ffff;
+      margin-right: 10px;
+      width: 100%;
+    }
+
+    .select-component select {
+      padding: 10px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    .total-price {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: 20px;
+      color: #00ffff;
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    /* Estilo para expandir los consejos */
+    .extra-info {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.95rem;
+      color: #e0e0e0;
+    }
+
+    .show-more {
+      color: #00ffff;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    /* Media queries para hacer la página responsive */
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .optimize-tips {
+        flex-direction: column;
+      }
+
+      .tip-card {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+      }
+
+      .select-component {
+        margin-bottom: 15px;
+      }
+
+      .total-price {
+        font-size: 1.2rem;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Media query para pantallas muy pequeñas */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav a {
+        font-size: 0.8rem;
+      }
+
+      .select-component select {
+        font-size: 0.9rem;
+      }
+
+      .tip-card h3 {
+        font-size: 1.2rem;
+      }
+
+      .tip-card p {
+        font-size: 0.9rem;
+      }
+
+      .total-price {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>GameGuidesPro</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="guides.html">Guías</a>
+        <a href="optimize-pc.html">Optimiza tu PC</a>
+        <a href="tutoriales.html">Tutoriales</a>
+        <a href="sobre-nosotros.html">Sobre Nosotros</a>
+        <a href="contact.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Optimiza tu PC para Juegos 🚀</h2>
+        <p>Con estos consejos, mejorarás el rendimiento de tu computadora y disfrutarás de tus juegos favoritos al máximo.</p>
+      </div>
+    </section>
+
+    <!-- Calculadora de precio de PC -->
+    <section class="price-calculator container">
+      <h3>Calcula el costo de tu PC para juegos (en USD)</h3>
+
+      <div class="select-component">
+        <label for="cpu">Selecciona una CPU:</label>
+        <select id="cpu">
+          <option value="0">Intel i3 - $100</option>
+          <option value="1">Intel i5 - $200</option>
+          <option value="2">Intel i7 - $300</option>
+          <option value="3">AMD Ryzen 5 - $250</option>
+          <option value="4">AMD Ryzen 7 - $350</option>
+        </select>
+      </div>
+
+      <div class="select-component">
+        <label for="gpu">Selecciona una GPU:</label>
+        <select id="gpu">
+          <option value="0">GTX 1050 - $150</option>
+          <option value="1">GTX 1660 - $250</option>
+          <option value="2">RTX 3060 - $400</option>
+          <option value="3">RTX 4080 - $1200</option>
+        </select>
+      </div>
+
+      <div class="select-component">
+        <label for="ram">Selecciona RAM (GB):</label>
+        <select id="ram">
+          <option value="0">8GB - $40</option>
+          <option value="1">16GB - $70</option>
+          <option value="2">32GB - $120</option>
+        </select>
+      </div>
+
+      <div class="select-component">
+        <label for="storage">Selecciona almacenamiento:</label>
+        <select id="storage">
+          <option value="0">500GB SSD - $50</option>
+          <option value="1">1TB SSD - $100</option>
+          <option value="2">2TB SSD - $200</option>
+        </select>
+      </div>
+
+      <div class="total-price" id="totalPrice">Total: $0</div>
+    </section>
+
+    <section class="optimize-tips container">
+      <div class="tip-card">
+        <h3>Actualiza tus Drivers</h3>
+        <p>Los controladores actualizados mejoran el rendimiento gráfico y general de tu PC, asegurando que todos los recursos se utilicen de manera eficiente.</p>
+        <span class="show-more" onclick="toggleInfo(this)">Leer más</span>
+        <div class="extra-info">
+          <p>Es importante mantener los controladores de la tarjeta gráfica, la placa base y otros componentes actualizados, ya que las nuevas versiones corrigen errores y mejoran el rendimiento general de tu PC. Para actualizar los drivers, ve al sitio web del fabricante o usa un software especializado.</p>
+        </div>
+      </div>
+      <div class="tip-card">
+        <h3>Desactiva Programas en Segundo Plano</h3>
+        <p>Desactiva cualquier programa innecesario que se ejecute en segundo plano, esto liberará recursos para tus juegos.</p>
+        <span class="show-more" onclick="toggleInfo(this)">Leer más</span>
+        <div class="extra-info">
+          <p>Para verificar qué programas están ejecutándose en segundo plano, puedes abrir el Administrador de Tareas en Windows (Ctrl + Shift + Esc) y cerrar los que no necesites. Esto libera recursos y aumenta el rendimiento de tus juegos.</p>
+        </div>
+      </div>
+      <div class="tip-card">
+        <h3>Optimiza la Configuración de Gráficos</h3>
+        <p>Configura adecuadamente los ajustes gráficos de tus juegos para un equilibrio entre calidad y rendimiento.</p>
+        <span class="show-more" onclick="toggleInfo(this)">Leer más</span>
+        <div class="extra-info">
+          <p>En muchos juegos, puedes ajustar la resolución, calidad de texturas y efectos visuales. Si tu PC no es lo suficientemente potente, baja los gráficos para mejorar la tasa de frames por segundo (FPS) y la fluidez general.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 GameGuidesPro. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    const cpuPrices = [100, 200, 300, 250, 350];
+    const gpuPrices = [150, 250, 400, 1200];
+    const ramPrices = [40, 70, 120];
+    const storagePrices = [50, 100, 200];
+
+    function updatePrice() {
+      const cpu = document.getElementById('cpu').value;
+      const gpu = document.getElementById('gpu').value;
+      const ram = document.getElementById('ram').value;
+      const storage = document.getElementById('storage').value;
+
+      const total = cpuPrices[cpu] + gpuPrices[gpu] + ramPrices[ram] + storagePrices[storage];
+      document.getElementById('totalPrice').innerText = `Total: $${total}`;
+    }
+
+    document.getElementById('cpu').addEventListener('change', updatePrice);
+    document.getElementById('gpu').addEventListener('change', updatePrice);
+    document.getElementById('ram').addEventListener('change', updatePrice);
+    document.getElementById('storage').addEventListener('change', updatePrice);
+
+    function toggleInfo(element) {
+      const extraInfo = element.nextElementSibling;
+      extraInfo.style.display = extraInfo.style.display === 'block' ? 'none' : 'block';
+      element.innerText = extraInfo.style.display === 'block' ? 'Leer menos' : 'Leer más';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guías - GameGuidesPro</title>
+  <style>
+    /* Estilos generales */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      text-align: center;
+      color: #00ffff;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      text-align: center;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffff;
+    }
+
+    .hero {
+      background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+      padding: 80px 20px;
+      text-align: center;
+      color: #fff;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: #00ffff;
+      color: #111;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #00b8b8;
+    }
+
+    .guides-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .guide-card {
+      background-color: #222;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .guide-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .guide-card p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .guide-card .btn {
+      font-size: 1rem;
+    }
+
+    /* Modal de detalle de la guía */
+    .modal {
+      display: none; /* Oculto por defecto */
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #222;
+      margin: 15% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 70%;
+      max-width: 600px;
+      color: #fff;
+    }
+
+    .modal-header h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .close-btn {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close-btn:hover,
+    .close-btn:focus {
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    /* Media queries para hacer la página responsive */
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+      }
+
+      .btn {
+        font-size: 1rem;
+      }
+
+      .guides-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav a {
+        font-size: 0.8rem;
+      }
+
+      .btn {
+        font-size: 0.9rem;
+      }
+
+      .guides-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GameGuidesPro</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="guides.html">Guías</a>
+      <a href="optimize-pc.html">Optimiza tu PC</a>
+      <a href="tutoriales.html">Tutoriales</a>
+      <a href="sobre-nosotros.html">Sobre Nosotros</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Guías de Videojuegos</h2>
+    <p>Aprende cómo mejorar tu experiencia de juego y optimizar tu PC con nuestras guías detalladas.</p>
+    <a href="#guides" class="btn">Explorar Guías</a>
+  </section>
+
+  <section class="guides-container" id="guides">
+    <div class="guide-card">
+      <h3>Guía de Optimización para PC</h3>
+      <p>Mejora el rendimiento de tu PC para disfrutar de una experiencia de juego fluida y sin interrupciones.</p>
+      <button class="btn" onclick="openModal('optimize-pc')">Ver Guía</button>
+    </div>
+    <div class="guide-card">
+      <h3>Trucos y Consejos para [Juego]</h3>
+      <p>Descubre secretos y trucos que te ayudarán a avanzar rápidamente en [Juego].</p>
+      <button class="btn" onclick="openModal('game-tricks')">Ver Guía</button>
+    </div>
+    <div class="guide-card">
+      <h3>Cómo Montar tu PC para Juegos</h3>
+      <p>Guía paso a paso para armar una PC ideal para juegos, ajustada a tu presupuesto.</p>
+      <button class="btn" onclick="openModal('build-pc')">Ver Guía</button>
+    </div>
+  </section>
+
+  <!-- Modal de detalles de la guía -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <div class="modal-header">
+        <h2>Detalles de la Guía</h2>
+      </div>
+      <div id="modal-body">
+        <!-- El contenido de cada guía se inyectará aquí -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 GameGuidesPro. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Función para abrir el modal con el contenido de la guía
+    function openModal(guide) {
+      const modal = document.getElementById("modal");
+      const modalBody = document.getElementById("modal-body");
+
+      if (guide === 'optimize-pc') {
+        modalBody.innerHTML = `
+          <h3>Guía de Optimización para PC</h3>
+          <p>¿Tu PC no está funcionando a la velocidad que esperas en los juegos? No te preocupes, aquí te damos los mejores consejos para mejorar el rendimiento de tu computadora:</p>
+          <ul>
+            <li><strong>1. Actualiza los controladores</strong> - Mantén tus controladores de GPU y chipset actualizados para asegurar un rendimiento óptimo.</li>
+            <li><strong>2. Optimiza los ajustes de gráficos</strong> - Ajusta la configuración gráfica de tus juegos para que corran más fluido sin perder demasiada calidad visual.</li>
+            <li><strong>3. Usa programas de optimización</strong> - Utiliza programas como CCleaner para limpiar el registro y los archivos temporales que afectan el rendimiento.</li>
+            <li><strong>4. Aumenta la RAM</strong> - Considera agregar más memoria RAM si tu PC no tiene suficiente para manejar juegos modernos.</li>
+          </ul>
+          <p><strong>¡Siguiendo estos pasos, verás una mejora significativa en el rendimiento de tu PC!</strong></p>
+        `;
+      } else if (guide === 'game-tricks') {
+        modalBody.innerHTML = `
+          <h3>Trucos y Consejos para [Juego]</h3>
+          <p>En esta guía, aprenderás los mejores trucos para [Juego], incluidos los niveles secretos, combinaciones de teclas y mucho más. Sigue los siguientes consejos:</p>
+          <ul>
+            <li><strong>1. Usa el modo sigiloso</strong> - Mantente fuera de la vista de los enemigos para ganar ventaja en el juego.</li>
+            <li><strong>2. Aprovecha los objetos ocultos</strong> - Explora cada rincón en busca de objetos que te proporcionarán poder extra.</li>
+            <li><strong>3. Domina las habilidades especiales</strong> - Practica con las habilidades especiales para tener el control total durante las batallas.</li>
+          </ul>
+        `;
+      } else if (guide === 'build-pc') {
+        modalBody.innerHTML = `
+          <h3>Cómo Montar tu PC para Juegos</h3>
+          <p>Si estás buscando construir tu propia PC para juegos, esta guía te ayudará a elegir los componentes adecuados y a montarlos paso a paso:</p>
+          <ul>
+            <li><strong>1. Elige tu procesador (CPU)</strong> - Asegúrate de elegir un procesador potente como un Intel i7 o AMD Ryzen 7 para juegos de alto rendimiento.</li>
+            <li><strong>2. Selecciona una tarjeta gráfica (GPU)</strong> - La tarjeta gráfica es esencial para la calidad visual de los juegos, opta por modelos como la Nvidia RTX 3060 o AMD RX 6800.</li>
+            <li><strong>3. Asegura una fuente de poder adecuada</strong> - La fuente debe ser capaz de manejar todos los componentes de tu PC sin problemas de energía.</li>
+          </ul>
+        `;
+      }
+
+      modal.style.display = "block";
+    }
+
+    // Función para cerrar el modal
+    function closeModal() {
+      const modal = document.getElementById("modal");
+      modal.style.display = "none";
+    }
+  </script>
+</body>
+</html>

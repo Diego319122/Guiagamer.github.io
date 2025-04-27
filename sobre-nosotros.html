@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros - GameGuidesPro</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      text-align: center;
+      color: #00ffff;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      text-align: center;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffff;
+    }
+
+    .about-container {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .about-container h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #00ffff;
+    }
+
+    .about-container p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .about-icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .about-icons div {
+      text-align: center;
+      width: 120px;
+    }
+
+    .about-icons i {
+      font-size: 3rem;
+      color: #00ffff;
+      margin-bottom: 10px;
+      transition: transform 0.3s;
+    }
+
+    .about-icons i:hover {
+      transform: scale(1.2);
+    }
+
+    .about-icons p {
+      font-size: 1rem;
+      color: #f0f0f0;
+    }
+
+    .suggestions-section {
+      background-color: #333;
+      padding: 40px 20px;
+      border-radius: 10px;
+      margin-top: 40px;
+    }
+
+    .suggestions-section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .suggestions-section p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .suggestions-section input,
+    .suggestions-section textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #444;
+      background-color: #222;
+      color: #fff;
+    }
+
+    .suggestions-section button {
+      background-color: #00ffff;
+      color: #111;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .suggestions-section button:hover {
+      background-color: #00b8b8;
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .about-container h2 {
+        font-size: 2rem;
+      }
+
+      .about-container p {
+        font-size: 1rem;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+      }
+
+      .suggestions-section input,
+      .suggestions-section textarea {
+        font-size: 0.9rem;
+      }
+
+      .suggestions-section button {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .about-container h2 {
+        font-size: 1.6rem;
+      }
+
+      .about-container p {
+        font-size: 0.9rem;
+      }
+
+      nav a {
+        font-size: 0.8rem;
+      }
+
+      .suggestions-section input,
+      .suggestions-section textarea {
+        font-size: 0.8rem;
+      }
+
+      .suggestions-section button {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+  <!-- Agregar íconos con FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <h1>GameGuidesPro</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="guides.html">Guías</a>
+      <a href="optimize-pc.html">Optimiza tu PC</a>
+      <a href="tutoriales.html">Tutoriales</a>
+      <a href="sobre-nosotros.html">Sobre Nosotros</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="about-container">
+    <h2>¿Quiénes Somos?</h2>
+    <p>
+      En GameGuidesPro, somos un equipo de apasionados gamers y entusiastas de la tecnología, dedicados a ofrecerte las mejores guías, tutoriales y consejos para mejorar tu experiencia de juego. 
+      Nos encanta compartir nuestro conocimiento y ayudarte a optimizar tu PC y disfrutar de cada partida al máximo. 
+      Con años de experiencia, sabemos lo que necesitas para sacar el mejor rendimiento de tus componentes y para dominar los títulos más populares.
+    </p>
+
+    <div class="about-icons">
+      <div>
+        <i class="fas fa-gamepad"></i>
+        <p>Gaming Profesional</p>
+      </div>
+      <div>
+        <i class="fas fa-cogs"></i>
+        <p>Optimización de PCs</p>
+      </div>
+      <div>
+        <i class="fas fa-users"></i>
+        <p>Comunidad Activa</p>
+      </div>
+    </div>
+
+    <p>
+      Nuestra misión es ofrecerte contenido actualizado y útil sobre videojuegos y hardware. Queremos ser tu fuente confiable de información y consejos prácticos para que puedas llevar tu pasión al siguiente nivel. 
+      ¡Únete a nosotros y mejora tu experiencia de juego hoy!
+    </p>
+  </section>
+
+  <!-- Sección de Sugerencias -->
+  <section class="suggestions-section">
+    <h3>¡Danos tus Sugerencias!</h3>
+    <p>¿Tienes ideas o sugerencias sobre cómo podemos mejorar GameGuidesPro? ¡Nos encantaría saber tu opinión!</p>
+    
+    <form action="#" method="POST">
+      <label for="suggestion-name">Tu nombre:</label>
+      <input type="text" id="suggestion-name" name="name" placeholder="Tu nombre" required>
+
+      <label for="suggestion-email">Correo electrónico:</label>
+      <input type="email" id="suggestion-email" name="email" placeholder="Tu correo electrónico" required>
+
+      <label for="suggestion-message">Tu sugerencia:</label>
+      <textarea id="suggestion-message" name="message" rows="4" placeholder="Escribe aquí tu sugerencia..." required></textarea>
+
+      <button type="submit">Enviar Sugerencia</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 GameGuidesPro. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
